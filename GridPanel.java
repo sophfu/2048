@@ -48,6 +48,7 @@ public class GridPanel extends JPanel implements KeyListener, ActionListener {
 		g.setFont(new Font("default", Font.BOLD, Grid.WIDTH/400*18)); // restart
 		g.drawString("Restart (enter)", Grid.WIDTH/400*238, Grid.WIDTH/400*443);
 		g.setFont(new Font("default", Font.BOLD, Grid.WIDTH/400*20)); // high score
+		if(score > highScore) highScore = score;
 		g.drawString("High Score: " + highScore, Grid.WIDTH/400*27, Grid.WIDTH/400*499);
 		if(gameLost) { // game over message
 			g.setColor(new Color(255, 245, 209));
@@ -93,8 +94,6 @@ public class GridPanel extends JPanel implements KeyListener, ActionListener {
 				if(r-1>=0 && tiles[r][c].getValue() == tiles[r-1][c].getValue()) // up
 					return false;	
 			}
-		if(score > highScore)
-			highScore = score;
 		return true;
 	}
 	private boolean isGameWon() {
