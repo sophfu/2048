@@ -1,4 +1,4 @@
-# 2048 Game Implementation
+# 2048
 
 This project is a Java implementation of the classic 2048 puzzle game. The game features a graphical interface, player controls, and a score-tracking system. The objective of the game is to combine tiles with the same number to eventually create a tile with the value of 2048.
 
